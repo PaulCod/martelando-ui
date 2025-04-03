@@ -1,0 +1,27 @@
+.home {
+  max-width: 100vw;
+  height: 95vh;
+}
+
+.main-content {
+  display: flex;
+  flex-grow: 1;
+  height: 100%;
+}
+
+.list-product,
+.profile {
+  flex-grow: 1;
+  padding: 16px;
+}
+
+.line {
+  height: 100%;
+  width: 1px;
+  border: 1px solid black;
+}
+
+.list {
+  max-width: 80%;
+  margin: 0 auto;
+}
