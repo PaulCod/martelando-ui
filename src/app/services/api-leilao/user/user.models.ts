@@ -12,7 +12,13 @@ export interface IUpdateUserRequest {
 }
 
 export interface ICreateUserResponse {
-
+  name: string
+  email: string
+  phone: string
 }
 
-export interface IUpdateUserResponse {}
+export interface IUpdateUserResponse {
+  name: string
+  email: string
+  phone: string
+}

@@ -7,4 +7,6 @@ export interface IUserService {
   update(request: IUpdateUserRequest): Observable<IUpdateUserResponse>;
 
   delete(): Observable<void>;
+
+  findByUserId(): Observable<ICreateUserResponse>;
 }

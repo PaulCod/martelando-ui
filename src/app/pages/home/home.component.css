@@ -9,21 +9,17 @@
   height: 100%;
 }
 
-.list-product,
-.profile {
-  flex-grow: 1;
-  padding: 16px;
-}
-
-.line {
-  height: 100%;
-  width: 1px;
-  border: 1px solid black;
-}
-
-.list {
-  max-width: 80%;
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1rem;
+  width: 100%;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
-
+@media (min-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

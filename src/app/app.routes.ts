@@ -8,6 +8,8 @@ import { RegisterComponent } from './pages/register/register.component';
 import { AuthGuard } from './guards/auth.guard';
 import { LoginComponent } from './pages/login/login.component';
 import { AuthRedirectGuard } from './guards/auth-redirect.guard';
+import { CreateProductComponent } from './pages/create-product/create-product.component';
+import { MyProductsComponent } from './pages/my-products/my-products.component';
 
 export const routes: Routes = [
   {
@@ -33,6 +35,17 @@ export const routes: Routes = [
     path: "register",
     component: RegisterComponent,
     canActivate: [AuthRedirectGuard]
+  },
+  {
+    path: "create-product",
+    component: CreateProductComponent,
+    canActivate: [AuthGuard]
+  },
+
+  {
+    path: "my-products",
+    component: MyProductsComponent,
+    canActivate: [AuthGuard]
   },
   {
     path: "**",

@@ -13,6 +13,9 @@ export class UserService implements IUserService {
   private readonly basePath = enviromnent.apiUrl;
 
   constructor(private http: HttpClient) { }
+  findByUserId(): Observable<ICreateUserResponse> {
+    return this.http.get<ICreateUserResponse>(`${this.basePath}auth`)
+  }
 
   save(request: ICreateUserRequest): Observable<ICreateUserResponse> {
     return this.http.post<ICreateUserResponse>(`${this.basePath}auth/register`, request)

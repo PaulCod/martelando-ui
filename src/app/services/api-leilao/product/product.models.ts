@@ -2,12 +2,12 @@ import { User } from "../../../models/User"
 
 export interface ICreateProductRequest {
   title: string
-  imageUrl: string
-  initialOffer: number
+  image_url: string
+  initial_offer: number
   description: string
   status: string
-  startAt: Date
-  endAt: Date
+  start_at: Date | null
+  end_at: Date | null
 }
 
 export interface IUpdateProductRequest {

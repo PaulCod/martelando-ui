@@ -5,17 +5,17 @@
 
     <div class="container">
       <label for="name">Nome</label>
-      <input type="text" id="name">
+      <input type="text" [(ngModel)]="name" name="name" id="name">
     </div>
 
     <div class="container">
       <label for="email">Email</label>
-      <input type="email" disabled>
+      <input type="email" [(ngModel)]="email" name="email" disabled>
     </div>
 
     <div class="container">
       <label for="">Telefone</label>
-      <input type="number">
+      <input type="number" [(ngModel)]="phone" name="phone">
     </div>
 
     <div class="container">

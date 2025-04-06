@@ -1,0 +1,29 @@
+<main class="product-container">
+  <form class="product-form" (submit)="onSubmit()">
+
+    <h2>Cadastrar produto</h2>
+
+    <div class="container">
+      <label for="title">Título</label>
+      <input type="text" [(ngModel)]="title" id="title" name="title">
+    </div>
+
+    <div class="container">
+      <label for="imageUrl">URL da Imagem</label>
+      <input type="url" [(ngModel)]="imageUrl" id="imageUrl" name="imageUrl">
+    </div>
+
+    <div class="container">
+      <label for="initialOffer">Oferta Inicial (R$)</label>
+      <input type="number" [(ngModel)]="initialOffer" id="initialOffer" name="initialOffer" step="0.01">
+    </div>
+
+    <div class="container">
+      <label for="description">Descrição</label>
+      <textarea id="description" [(ngModel)]="description" name="description"></textarea>
+    </div>
+
+    <button type="submit" class="btn-update">Criar</button>
+  </form>
+</main>
+
