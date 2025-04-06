@@ -1,20 +1,24 @@
 <main class="login-container">
-  <form class="login-form" action="post">
+  <form class="login-form" action="post" (ngSubmit)="onSubimit()">
 
     <h1>Faça login</h1>
 
     <div class="input-container">
       <label for="email">Email:</label>
-      <input type="email" name="email" id="email" [placeholder]="emailPlacesHolder">
+      <input type="email" [(ngModel)]="email" name="email" id="email" [placeholder]="emailPlacesHolder">
     </div>
 
     <div class="input-container">
       <label for="password">Password:</label>
-      <input type="password" name="password" id="password" [placeholder]="passwordPlaceHolder">
+      <input type="password" [(ngModel)]="password" name="password" id="password" [placeholder]="passwordPlaceHolder">
     </div>
 
 
-    <button class="btn-login">Login</button>
+    <button class="btn-login" type="submit">Login</button>
+
+    <br>
+
+    <span>Não possui uma conta? <a routerLink="/register">Clique aqui</a></span>
 
   </form>
 </main>

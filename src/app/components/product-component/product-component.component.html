@@ -1,0 +1,16 @@
+<div class="product-component" *ngIf="product">
+  <h2>{{product.title}}</h2>
+
+  <img [src]=[product.imageUrl] alt="">
+
+  <p>{{product.description}}</p>
+
+  <div>
+    <div>
+      <span>{{product.owner.name}}</span>
+    </div>
+
+    <button type="button">Fazer oferta</button>
+  </div>
+
+</div>

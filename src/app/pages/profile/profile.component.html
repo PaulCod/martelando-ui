@@ -1,1 +1,34 @@
-<p>profile works!</p>
+<main class="profile-container">
+  <form class="profile-form" action="post" (submit)="onUpdateAccount()">
+
+    <h2>Seus Dados</h2>
+
+    <div class="container">
+      <label for="name">Nome</label>
+      <input type="text" id="name">
+    </div>
+
+    <div class="container">
+      <label for="email">Email</label>
+      <input type="email" disabled>
+    </div>
+
+    <div class="container">
+      <label for="">Telefone</label>
+      <input type="number">
+    </div>
+
+    <div class="container">
+      <label for="password">Senha</label>
+      <input type="password">
+    </div>
+
+    <button type="submit" class="btn-update">Atualizar</button>
+  </form>
+
+  <div class="buttons">
+    <button class="btn-delete" (click)="onDeleteAccount()">Deletar Conta</button>
+
+    <button class="btn-logout" (click)="onLogout()">Logout</button>
+  </div>
+</main>

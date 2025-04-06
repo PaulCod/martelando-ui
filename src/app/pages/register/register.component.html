@@ -1,1 +1,31 @@
-<p>register works!</p>
+<main class="register-container">
+  <form action="post" class="register-form" (submit)="onSubmit()">
+
+    <h1>Faça seu cadastro</h1>
+
+    <div class="container">
+      <label for="">Nome</label>
+      <input type="text" [(ngModel)]="name" name="name">
+    </div>
+
+    <div class="container">
+      <label for="">Email</label>
+      <input type="email" [(ngModel)]="email" name="email">
+    </div>
+
+    <div class="container">
+      <label for="">Telefone</label>
+      <input type="number" [(ngModel)]="phone" name="phone">
+    </div>
+
+    <div class="container">
+      <label for="">Senha</label>
+      <input type="password" [(ngModel)]="password" name="password">
+    </div>
+
+
+    <button class="btn-register" type="submit">Registrar</button>
+
+    <span>Já possui conta? <a routerLink="/login">Faça login</a></span>
+  </form>
+</main>

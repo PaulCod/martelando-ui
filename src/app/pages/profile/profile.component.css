@@ -1,0 +1,75 @@
+.profile-container {
+  max-width: 100vw;
+  min-height: 90vh;
+}
+
+.profile-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 800px;
+  margin: 50px auto;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 50px;
+  border-radius: 20px;
+  background-color: #F4F3EE;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.container label {
+  font-size: 20px;
+}
+
+.container input {
+  padding: 5px;
+  font-size: 20px;
+}
+
+.btn-update {
+  padding: 5px 15px;
+  width: 40%;
+  font-size: 20px;
+  border-radius: 10px;
+  border: none;
+  background-color: aqua;
+  transition: all 300ms ease-in-out;
+  cursor: pointer;
+}
+
+.btn-update:hover {
+  background-color: aliceblue;
+}
+
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  justify-self: center;
+  gap: 10px;
+}
+
+.buttons button {
+  padding: 5px 15px;
+  font-size: 20px;
+  border-radius: 10px;
+  border: none;
+  transition: all 300ms ease-in-out;
+  cursor: pointer;
+}
+
+.btn-delete {
+  background-color: red;
+  color: white;
+}
+
+.btn-logout {
+  background-color: aqua;
+
+}

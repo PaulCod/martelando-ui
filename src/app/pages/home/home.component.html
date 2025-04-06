@@ -1,22 +1,13 @@
 <main class="home">
   <div class="main-content">
     <div class="list-product">
-      <div class="list">
-        <div class="card-list">
-          <h2>Title</h2>
-
-          <p>description</p>
-
-          <div>
-            <span>maior lance</span>
-            <span>Count to End</span>
-          </div>
-        </div>
+      <div class="list" *ngIf="products.length != 0">
+        <app-product-component *ngFor="let p of products" [product]="p"/>
       </div>
-    </div>
-    <span class="line"></span>
-    <div class="profile">
-      <app-login />
+
+      <div *ngIf="products.length == 0">
+        <h2>Nenhum produto cadastrado</h2>
+      </div>
     </div>
   </div>
 </main>
