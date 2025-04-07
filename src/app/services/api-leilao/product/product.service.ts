@@ -3,7 +3,7 @@ import { enviromnent } from '../../../../environment/enviromnent';
 import { HttpClient } from '@angular/common/http';
 import { IProductService } from './iproduct.service';
 import { Observable } from 'rxjs';
-import { ICreateProductRequest, ICreateProductResponse, IUpdateProductRequest, IUpdateProductResponse, IFindAllProductsResponse } from './product.models';
+import { ICreateProductRequest, ICreateProductResponse, IUpdateProductRequest, IUpdateProductResponse, IFindAllProductsResponse, IFindProductByIdRequest } from './product.models';
 
 @Injectable({
   providedIn: 'root'
@@ -13,6 +13,9 @@ export class ProductService implements IProductService{
   private readonly basePath = enviromnent.apiUrl
 
   constructor(private http: HttpClient) { }
+  findByProductId(id: string): Observable<ICreateProductResponse> {
+    return this.http.get<ICreateProductResponse>(`${this.basePath}products/${id}`)
+  }
 
   create(request: ICreateProductRequest): Observable<ICreateProductResponse> {
     return this.http.post<ICreateProductResponse>(`${this.basePath}products`, request)
@@ -25,5 +28,6 @@ export class ProductService implements IProductService{
   findAllProducts(): Observable<IFindAllProductsResponse[]> {
     return this.http.get<IFindAllProductsResponse[]>(`${this.basePath}products`)
   }
+
 
 }

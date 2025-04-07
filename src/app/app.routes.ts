@@ -10,6 +10,7 @@ import { LoginComponent } from './pages/login/login.component';
 import { AuthRedirectGuard } from './guards/auth-redirect.guard';
 import { CreateProductComponent } from './pages/create-product/create-product.component';
 import { MyProductsComponent } from './pages/my-products/my-products.component';
+import { ProductComponent } from './pages/product/product.component';
 
 export const routes: Routes = [
   {
@@ -46,6 +47,10 @@ export const routes: Routes = [
     path: "my-products",
     component: MyProductsComponent,
     canActivate: [AuthGuard]
+  },
+  {
+    path: "product/:id",
+    component: ProductComponent
   },
   {
     path: "**",

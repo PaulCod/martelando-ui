@@ -18,6 +18,10 @@ export interface IUpdateProductRequest {
   endAt: Date
 }
 
+export interface IFindProductByIdRequest {
+  id: number
+}
+
 export interface ICreateProductResponse {
   id: number
   title: string

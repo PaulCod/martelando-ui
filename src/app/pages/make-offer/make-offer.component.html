@@ -1,1 +1,13 @@
-<p>make-offer works!</p>
+<div class="popup-background">
+  <div class="popup-content">
+    <h3>Fazer uma oferta</h3>
+    <label>
+      Valor da oferta:
+      <input type="number" [(ngModel)]="value" />
+    </label>
+    <div class="popup-actions">
+      <button (click)="onSubmit()">Enviar</button>
+      <button (click)="onCancel()">Cancelar</button>
+    </div>
+  </div>
+</div>
