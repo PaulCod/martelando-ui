@@ -11,7 +11,7 @@ import { OfferService } from '../../services/api-leilao/offer/offer.service';
   standalone: true
 })
 export class MakeOfferComponent {
-  @Input() productId: number = 0;
+  @Input() productId!: number;
   @Output() close = new EventEmitter<void>();
 
   value: number = 0;
@@ -19,12 +19,18 @@ export class MakeOfferComponent {
   constructor(private offerService: OfferService) {}
 
   onSubmit() {
-    if (this.value <= 0) {
-      alert("Informe um valor válido.");
+    if (this.value <= 0 || !this.productId) {
+      alert("Informe um valor válido e aguarde o produto carregar.");
       return;
     }
 
-    this.offerService.create({value: this.value, productId: this.productId}).subscribe({
+    console.log('Enviando oferta com:', {
+      amount: this.value,
+      product_id: this.productId
+    });
+
+
+    this.offerService.create({amount: this.value, product_id: this.productId, status: "PENDING"}).subscribe({
       next: () => {
         alert("Oferta enviada com sucesso!");
         this.close.emit();

@@ -27,6 +27,10 @@ export class ProductComponent implements OnInit {
   ) {}
 
   openOfferPopup() {
+    if(!this.product) {
+      alert("Produto nao carregado")
+      return;
+    }
     this.showOfferPopup = true;
   }
 
@@ -48,6 +52,7 @@ export class ProductComponent implements OnInit {
 
     this.offerService.findByProductId(Number(productId)).subscribe({
       next: (offers) => {
+        console.log(offers)
         this.offers = offers;
       },
       error: (err) => console.error('Erro ao buscar ofertas', err)

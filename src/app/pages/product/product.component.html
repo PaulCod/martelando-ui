@@ -11,7 +11,7 @@
     <h3>Ofertas</h3>
     <ul *ngIf="offers.length > 0; else noOffers">
       <li *ngFor="let offer of offers">
-        R$ {{ offer.value | number:'1.2-2' }} - por {{ offer.owner.name }}
+        R$ {{ offer.amount | number:'1.2-2' }} - por {{ offer.bidder.name }}
       </li>
     </ul>
     <ng-template #noOffers>
@@ -22,7 +22,7 @@
 
     <app-make-offer
     *ngIf="showOfferPopup"
-    [productId]="product?.id!"
+    [productId]="product.id"
     (close)="closeOfferPopup()"
     />
   </div>

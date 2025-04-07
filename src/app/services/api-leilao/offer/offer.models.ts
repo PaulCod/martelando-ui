@@ -1,35 +1,37 @@
 import { User } from "../../../models/User"
+import { ICreateProductResponse } from "../product/product.models"
 
 export interface ICreateOfferRequest {
-  productId: number
-  value: number
+  product_id: number
+  amount: number,
+  status: string
 }
 
 export interface ICreateOfferResponse {
   id: number
-  value: number
+  amount: number
   createdAt: Date
-  productId: number
-  owner: User
+  product: ICreateOfferResponse
+  bidder: User
 }
 
 export interface IUpdateOfferRequest {
   id: number
-  value: number
+  amount: number
 }
 
 export interface IUpdateOfferResponse {
   id: number
-  value: number
+  amount: number
   createdAt: Date
-  productId: number
-  owner: User
+  product: ICreateProductResponse
+  bidder: User
 }
 
 export interface IFindOffersByProductIdResponse {
   id: number
-  value: number
+  amount: number
   createdAt: Date
-  productId: number
-  owner: User
+  product: ICreateProductResponse
+  bidder: User
 }
